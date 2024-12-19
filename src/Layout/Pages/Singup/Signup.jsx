@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import img from '../../../assets/images/login/login.svg'
 import { useContext } from 'react';
 import { AuthContext } from '../../../provider/AuthProviders';
-import { Result } from 'postcss';
 
 const Signup = () => {
     const { createUser, signInWithGoogle } = useContext(AuthContext)

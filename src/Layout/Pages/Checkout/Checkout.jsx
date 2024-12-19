@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import img from '../../../assets/images/checkout/checkout.png'
 
 const Checkout = () => {
@@ -28,7 +28,7 @@ const Checkout = () => {
                 <div className="">
                     <textarea className="textarea textarea-bordered p-6 text-base bg-white textarea-md  w-full" name="Your message" placeholder="Your Message" id="Message"></textarea>
                 </div>
-                <button className="bg-[#FF3811] text-white font-semibold px-6 py-4 rounded-lg">Order Confirm</button>
+                <Link to={`/booking/${_id}`}><button className="bg-[#FF3811] text-white w-full font-semibold px-6 py-4 rounded-lg">Booking Confirm</button></Link>
             </form>
         </div>
     );
