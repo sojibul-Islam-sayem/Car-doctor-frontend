@@ -4,23 +4,32 @@ import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProviders";
 
 const Login = () => {
-const {signIn} = useContext(AuthContext)
+    const { signIn, signInWithGoogle } = useContext(AuthContext)
 
-const handleLogIn = event =>{
-    event.preventDefault();
-    const form = event.target;
-    const email = form.email.value;
-    const password = form.password.value;
-    console.log(email, password)
+    const handleLogIn = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password)
 
-    signIn(email,password)
-    .then(result=> {
-        const user = result.user;
-        console.log(user);
-    })
-    .then(error => console.log(error)
-    )
-}
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .then(error => console.log(error)
+            )
+    }
+    const handleWithGoogle = () => {
+        signInWithGoogle()
+            .then(result => {
+                const user = result.user
+                console.log(user);
+            })
+            .then(error => console.log(error)
+            )
+    }
 
     return (
         <div className="max-w-7xl mx-auto my-12">
@@ -49,7 +58,7 @@ const handleLogIn = event =>{
                         <input className="bg-[#FF3811] text-[20px] py-2 rounded-lg font-semibold text-white" type="submit" value="Log In" />
                         <p className="text-center font-medium ">Or Sign in with</p>
                         <div className="flex mx-auto space-x-2">
-                            <img className="w-9 h-9 rounded-full bg-black" src="" alt="" />
+                            <img onClick={handleWithGoogle} className="w-9 h-9 rounded-full bg-black" src="" alt="" />
                             <img className="w-9 h-9 rounded-full bg-black" src="" alt="" />
                             <img className="w-9 h-9 rounded-full bg-black" src="" alt="" />
                         </div>

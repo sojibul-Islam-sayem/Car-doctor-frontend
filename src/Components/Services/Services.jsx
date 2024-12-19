@@ -6,10 +6,21 @@ const Services = () => {
     const [services, setServices] = useState([])
 
     useEffect(() => {
-        fetch('../../../public/services.json')
-            .then(res => res.json())
-            .then(data => setServices(data))
-    }, [])
+        const fetchServices = async () => {
+            try {
+                const response = await fetch('http://localhost:5000/services');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                setServices(data);
+            } catch (error) {
+                console.error("Fetching services failed:", error);
+            }
+        };
+
+        fetchServices();
+    }, []);
 
     return (
         <div className=''>

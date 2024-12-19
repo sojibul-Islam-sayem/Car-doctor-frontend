@@ -26,14 +26,8 @@ const AuthProviders = ({ children }) => {
     }
 
     const signInWithGoogle = async() => {
-        try {
-            const result = await signInWithPopup(auth, googleProvider);
-            console.log("Google Sign-In Success:", result.user);
-        } catch (error) {
-            console.error("Google Sign-In Error:", error);
-            console.error("Error Code:", error.code);
-            console.error("Error Message:", error.message);
-        }
+        setLoading(true)
+        return signInWithPopup(auth, googleProvider);
     }
 
     useEffect(() => {
