@@ -11,7 +11,7 @@ import { MdOutlineWatchLater } from "react-icons/md";
 const Features = () => {
     return (
         <div>
-            <div className="flex flex-col space-y-3 items-center justify-center mb-6">
+            <div className="flex flex-col space-y-3 items-center mt-14 justify-center">
                 <h3 className="text-[20px] font-bold text-[#FF3811]">Core Features</h3>
                 <h1 className="text-5xl font-bold text-black">Why Choose Us</h1>
                 <p className="text-[#737373] text-center">the majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even slightly believable. </p>

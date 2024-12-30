@@ -2,7 +2,7 @@ import img4 from "../../assets/images/team/4.jpg"
 
 const WebExpert = () => {
     return (
-        <div className="flex items-center mb-10 mt-10">
+        <div className="flex items-center mb-10 mt-16">
             <div className="w-1/2">
                 <div className="w-11/12 p-4 flex items-center justify-center  rounded-full border-[20px] border-[#FF38111a]">
                     <img className="border-8   border-[#FF3811] rounded-full" src={img4} alt="" />

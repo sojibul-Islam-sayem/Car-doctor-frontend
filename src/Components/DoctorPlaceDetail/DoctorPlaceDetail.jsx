@@ -5,7 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const DoctorPlaceDetail = () => {
     return (
-        <div className="bg-[#151515] max-w-7xl rounded-xl flex justify-between mx-auto px-16 py-24">
+        <div className="bg-[#151515] max-w-7xl rounded-xl flex justify-between mb-10 mx-auto px-16 py-24">
             <div className="flex items-center space-x-4">
                 <MdDateRange className="text-5xl" />
                 <div>

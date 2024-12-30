@@ -39,7 +39,7 @@ const Booking = () => {
 
             <div className="relative w-full h-[300px] ">
                 <img
-                    className="w-full h-full rounded-lg" />
+                    className="w-full h-full rounded-lg" src='../../../assets/images/checkout/checkout.png' />
                 <div className="absolute w-full rounded-lg bg-gradient-to-l from-[#15151500] to-[#151515] h-full left-0 top-0 flex items-center">
                     <h3 className="">Book Now:{title}</h3>
                 </div>
