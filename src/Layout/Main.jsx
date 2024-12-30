@@ -5,7 +5,7 @@ import Nabvar from '../Components/Navbar/Nabvar';
 
 const Main = () => {
     return (
-        <div className='bg-white'>
+        <div className='bg-white font-inter'>
             <Nabvar></Nabvar>
             <Outlet></Outlet>
             <Footer></Footer>

@@ -8,7 +8,7 @@ const Services = () => {
     useEffect(() => {
         const fetchServices = async () => {
             try {
-                const response = await fetch('http://localhost:5000/services');
+                const response = await fetch('https://car-doctor-backend-phi.vercel.app/services');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -23,8 +23,8 @@ const Services = () => {
     }, []);
 
     return (
-        <div className=''>
-            <div className='text-center'>
+        <div className='mt-24'>
+            <div className='text-center flex flex-col space-y-5 mb-4'>
                 <h3 className='font-bold text-[20px] text-[#FF3811]'>Service</h3>
                 <h1 className="text-5xl text-black font-bold ">Our Service Area</h1>
                 <p className="text-[#737373] mb-7">the majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even slightly believable. </p>

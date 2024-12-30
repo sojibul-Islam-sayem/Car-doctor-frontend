@@ -20,7 +20,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = {email};
-                axios.post('http://localhost:5000/jwt',{user}, {
+                axios.post('https://car-doctor-backend-phi.vercel.app/jwt',{user}, {
                     withCredentials: true, // Include cookies
                 })
                 .then(res=>{

@@ -23,15 +23,15 @@ const Nabvar = () => {
 
 
     const navItem = <>
-        <li><Link>Home</Link></li>
-        <li><Link>About</Link></li>
+        <li><Link>HOME</Link></li>
+        <li><Link to='/aboutus'>ABOUT US</Link></li>
         {
             user?.email?<>
-            <li><Link to='/bookings'>Bookings</Link></li>
-            <li><button onClick={handleLogOut}>Logout</button></li>
-            </>: <li><Link to='/login'>Log In</Link></li>
+            <li><Link to='/bookings'>BOOKINGS</Link></li>
+            <li><button onClick={handleLogOut}>LOGOUT</button></li>
+            </>: <li><Link to='/login'>LOG IN</Link></li>
         }
-        <li><Link>Contact</Link></li>
+        <li><Link>CONTACT</Link></li>
     </>
 
     return (
@@ -55,14 +55,14 @@ const Nabvar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-base-100 font-bold rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             {navItem}
                         </ul>
                     </div>
                     <Link to='/' className="text-xl"><img src={logo} alt="" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="flex space-x-9">
+                    <ul className="flex font-semibold space-x-9">
                         {navItem}
                     </ul>
                 </div>
