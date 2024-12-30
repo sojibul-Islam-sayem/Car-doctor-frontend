@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from '../../../assets/images/login/login.svg'
 import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProviders";
+import axios from "axios";
 
 const Login = () => {
     const { signIn, signInWithGoogle } = useContext(AuthContext)
@@ -18,8 +19,16 @@ const Login = () => {
 
         signIn(email, password)
             .then(result => {
-                const user = result.user;
-                navigate(from, { replace: true });
+                const user = {email};
+                axios.post('http://localhost:5000/jwt',{user}, {
+                    withCredentials: true, // Include cookies
+                })
+                .then(res=>{
+                    console.log(res.data);
+                    if(res.data.success){
+                        navigate(from, { replace: true });
+                    }
+                })
             })
             .then(error => console.log(error)
             )

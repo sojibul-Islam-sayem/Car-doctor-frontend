@@ -27,12 +27,17 @@ const Services = () => {
             <div className='text-center'>
                 <h3 className='font-bold text-[20px] text-[#FF3811]'>Service</h3>
                 <h1 className="text-5xl text-black font-bold ">Our Service Area</h1>
-                <p className="text-[#737373]">the majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even slightly believable. </p>
+                <p className="text-[#737373] mb-7">the majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even slightly believable. </p>
             </div>
-            <div className='grid grid-cols-3 gap-3'>
+            <div className='grid grid-cols-3 gap-14'>
                 {
                     services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                 }
+            </div>
+            <div className='flex justify-center mt-5 mb-9'>
+                <button className="border px-3 py-2 rounded text-[#FF3811] border-[#FF3811]">
+                    More Services
+                </button>
             </div>
         </div>
     );
